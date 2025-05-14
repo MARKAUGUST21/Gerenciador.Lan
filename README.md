@@ -12,3 +12,9 @@
 
 "Aãb pbafvtb fragve óqvb qndhryrf dhr rfgãb nonvkb qr zvz... B dhr rh fvagb é cran"
 - Rfpnabe, Crpnqb qb Yrãb qb Bethyub
+
+.--. . ... ... --- .- ... / -.-. .... .- - .- ... / ... --- / --- -.. .. .- ... .- ...
+
+-... .- .-.. --- / ... ..- ... .--. . .. - ---
+
+- --- -- .- ... / - ..- .-. -... .- -. -.. ---
