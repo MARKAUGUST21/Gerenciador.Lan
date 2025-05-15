@@ -1,20 +1,32 @@
-私はコーヒーが好きですが、そうではありません
+# 💻 Gestão de Lan House
 
-私を翻訳してみてください、横柄な虫
+Um sistema desktop simples para gerenciamento de **ativos** (computadores, equipamentos) e **funcionários** de uma Lan House, desenvolvido com **Python e Tkinter**.
 
-ένα κατώτερο ον σαν εσένα δεν θα μπορέσει ποτέ να με αποκρυπτογραφήσει
+---
 
-01100101 01110101 00100000 01100001 01101101 01101111 00100000 01101111 01101110 01100101 00100000 01110000 01101001 01100101 01100011 01100101 
+## 🧠 Funcionalidades
 
-"fr ibpê aãb pbafrthr cebgrtre frh pncvgãb, fhn nzovçãb aãb grz b zrabe fragvqb... Yhssl é b ubzrz dhr veá fr gbeane b Erv qbf Cvengnf!!!"
-"Aãb npbagrprh ANQN"
-- Ebebabn Mbeb
+🔐 **Login com autenticação**  
+🎛 **Painel Administrativo com abas separadas**  
+🖥 **Gerenciamento de Ativos**  
+- Adicionar, editar e remover computadores
+- Visualizar status, data de aquisição, técnico responsável, observações etc.
 
-"Aãb pbafvtb fragve óqvb qndhryrf dhr rfgãb nonvkb qr zvz... B dhr rh fvagb é cran"
-- Rfpnabe, Crpnqb qb Yrãb qb Bethyub
+👨‍💻 **Gerenciamento de Funcionários**  
+- Adicionar, editar e remover funcionários
+- Controlar função, especialidade e último equipamento manuseado
 
-.--. . ... ... --- .- ... / -.-. .... .- - .- ... / ... --- / --- -.. .. .- ... .- ...
+---
 
--... .- .-.. --- / ... ..- ... .--. . .. - ---
+## 🛠 Tecnologias Utilizadas
 
-- --- -- .- ... / - ..- .-. -... .- -. -.. ---
+- Python 3.x  
+- Tkinter (interface gráfica nativa)
+- ttk (tema moderno para os componentes)
+
+---
+
+## 📸 Capturas de Tela (opcional)
+
+> Você pode adicionar imagens aqui no futuro para ilustrar o sistema, por exemplo:
+
