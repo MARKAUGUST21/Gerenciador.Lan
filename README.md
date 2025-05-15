@@ -25,7 +25,7 @@ Este projeto foi desenvolvido como parte da disciplina de **NP2 - Programação*
    ```bash
    git clone https://github.com/MARKAUGUST21/Gerenciador.Lan.git
 
-## Integrantes do projeto
+## Integrantes do projeto 👨‍💻
 
 * ERIK TOMAZ SANTANA
 * GABRIEL DE CAMPOS MARTINS
