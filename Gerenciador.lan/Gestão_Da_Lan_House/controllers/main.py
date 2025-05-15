@@ -31,7 +31,7 @@ def abrir_painel_admin():
     notebook.add(frame_ativos, text="Ativos")
 
     global tree_ativos, colunas_ativos
-    colunas_ativos = ("id", "tipo", "valor", "data_aquisicao", "status", "ult_manutencao", "tecnico", "obs")
+    colunas_ativos = ("id", "nome", "especificacoes", "valor", "ult_manutencao", "status", "data_aquisicao", "vida_util",)
     tree_ativos = ttk.Treeview(frame_ativos, columns=colunas_ativos, show='headings')
 
     for col in colunas_ativos:
@@ -39,9 +39,26 @@ def abrir_painel_admin():
         tree_ativos.column(col, width=100)
 
     # Dados de exemplo
-    tree_ativos.insert("", tk.END, values=("PC01", "Gamer", "5000", "01/02/2024", "Em Uso", "01/04/2025", "João", "GPU aquece"))
-    tree_ativos.insert("", tk.END, values=("PC02", "Cotidiano", "3000", "10/01/2024", "Em Uso", "10/03/2025", "Lucas", "Funciona bem"))
+    
+    tree_ativos.insert("", tk.END, values=("#SEC1", "Câmera de Segurança", "IP, Full HD, 20m, 120°, IP66", "225","10/01/2025", "Novo", "10/01/2025", "5 anos"))
 
+    tree_ativos.insert("", tk.END, values=("#COE1", "Escritório", "quad-core, RAM 8gb, SSD SATA 512 GB", "1550","01/01/2025", "Novo", "01/01/2025", "6 anos"))
+
+    tree_ativos.insert("", tk.END, values=("#COS1", "Servidor", "quad-core, RAM 8gb, SSD M.2 2 TB, 2x HD 1 TB", "2550","01/01/2025", "Novo", "01/01/2025", "5 anos"))
+    
+    tree_ativos.insert("", tk.END, values=("#SIOP1", "Sistema Operacional", "Windows 11", "200","08/01/2025", "Novo", "08/01/2025", "-"))
+
+    tree_ativos.insert("", tk.END, values=("#CACO1", "Cadeira para computador", "Ergônomica de Escritório", "200","04/01/2025", "Novo", "08/01/2025", "8 anos"))
+
+    tree_ativos.insert("", tk.END, values=("#CLAC1", "Ar-condicionado", "Split Inverter 18.000 BTUs", "2700","05/01/2025", "Novo", "05/01/2025", "8 anos"))
+
+    tree_ativos.insert("", tk.END, values=("#REN1", "Nobreak", "1400 VA, Entrada e Saída Bivolt", "700","02/01/2025", "Novo", "02/01/2025", "5 anos"))
+
+    tree_ativos.insert("", tk.END, values=("#RES1", "Switch", "Gigabit 10/100/1000 Mbps Gerenciável 24 portas", "790","02/01/2025", "Novo", "02/01/2025", "5 anos"))
+
+    tree_ativos.insert("", tk.END, values=("#MECO1", "Mesa para computador", "100x60 cm", "150","04/01/2025", "Novo", "04/01/2025", "8 anos"))
+
+    
     tree_ativos.pack(fill='both', expand=True, padx=10, pady=10)
 
     # Botões de ação para ativos
@@ -57,20 +74,19 @@ def abrir_painel_admin():
     notebook.add(frame_funcionarios, text="Funcionários")
 
     global tree_func, colunas_func
-    colunas_func = ("id", "nome", "funcao", "especialidade", "ultimo_pc")
+    colunas_func = ("id", "nome", "funcao", "especialidade", "salario")
     tree_func = ttk.Treeview(frame_funcionarios, columns=colunas_func, show='headings')
 
     for col in colunas_func:
         tree_func.heading(col, text=col.capitalize())
         tree_func.column(col, width=150)
 
-    # Dados de exemplo
-    tree_func.insert("", tk.END, values=("F01", "Ana", "Recepcionista", "-", "-"))
-    tree_func.insert("", tk.END, values=("F02", "João", "Técnico", "Hardware", "PC01"))
-    tree_func.insert("", tk.END, values=("F03", "Lucas", "Técnico", "Redes", "PC02"))
-    tree_func.insert("", tk.END, values=("F04", "Marta", "Técnico", "Software", "PC03"))
+    # Adicionar os funcionarios na hora
+
 
     tree_func.pack(fill='both', expand=True, padx=10, pady=10)
+
+
 
     # Botões de ação para funcionários
     frame_botoes_func = ttk.Frame(frame_funcionarios)
@@ -181,17 +197,24 @@ def remover_funcionario():
 # --- Janela de Login ---
 root = tk.Tk()
 root.title("Login - Gestão Lan House")
-root.geometry("300x180")
+root.geometry("700x400")
+root.configure(bg="")
 
-tk.Label(root, text="Usuário:").pack(pady=5)
+# Adiciona cor aos widgets de login
+label_usuario = tk.Label(root, text="Usuário:", bg="#e8e8e8")
+label_usuario.pack(pady=5)
 entry_usuario = tk.Entry(root)
 entry_usuario.pack(pady=5)
 
-tk.Label(root, text="Senha:").pack(pady=5)
+label_senha = tk.Label(root, text="Senha:", bg="#e8e8e8")
+label_senha.pack(pady=5)
 entry_senha = tk.Entry(root, show="*")
 entry_senha.pack(pady=5)
 
-tk.Button(root, text="Entrar", command=verificar_login).pack(pady=10)
+btn_entrar = tk.Button(root, text="Entrar", command=verificar_login, bg="#4CAF50", fg="white", activebackground="#388E3C")
+btn_entrar.pack(pady=10)
+
+
 
 root.mainloop()
 
